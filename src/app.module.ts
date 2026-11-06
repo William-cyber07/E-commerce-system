@@ -10,11 +10,14 @@ import { PaymentsModule } from "./modules/payments/payments.module";
 import { CheckoutModule } from "./modules/checkout/checkout.module";
 import { WebhooksModule } from "./modules/webhooks/webhooks.module";
 import { ScheduleModule } from "@nestjs/schedule";
+import { AdminModule } from "./modules/admin/admin.module";
+
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     PrismaModule,
+    AdminModule,
     ScheduleModule.forRoot(),
     AuthModule,
     CatalogModule,

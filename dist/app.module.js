@@ -19,6 +19,7 @@ const payments_module_1 = require("./modules/payments/payments.module");
 const checkout_module_1 = require("./modules/checkout/checkout.module");
 const webhooks_module_1 = require("./modules/webhooks/webhooks.module");
 const schedule_1 = require("@nestjs/schedule");
+const admin_module_1 = require("./modules/admin/admin.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -27,6 +28,7 @@ exports.AppModule = AppModule = __decorate([
         imports: [
             config_1.ConfigModule.forRoot({ isGlobal: true }),
             prisma_module_1.PrismaModule,
+            admin_module_1.AdminModule,
             schedule_1.ScheduleModule.forRoot(),
             auth_module_1.AuthModule,
             catalog_module_1.CatalogModule,
